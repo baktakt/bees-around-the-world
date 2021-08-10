@@ -13,10 +13,10 @@ export class GoogleMap {
 
     constructor(divId: string) {
         this.map = new google.maps.Map(document.getElementById(divId), {
-            zoom: 1,
+            zoom: 4,
             center: {
-                lat: 0,
-                lng: 0,
+                lat: 53,
+                lng: 13,
             },
         });
     }

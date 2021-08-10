@@ -26,8 +26,8 @@ export class Person implements Mappable {
         this.email = person.email;
         this.image = person.image;
         this.location = {
-            lat: parseFloat(faker.address.latitude()),
-            lng: parseFloat(faker.address.longitude()),
+            lat: parseFloat(faker.address.latitude(37, 69)),
+            lng: parseFloat(faker.address.longitude(-11, 44)),
         };
     }
 
@@ -36,7 +36,7 @@ export class Person implements Mappable {
         <div>
             <h1>${this.name}</h1>
             <h3>${this.email}</h3>
-            <img src='${this.image.url}' style='width: 200px;height: 200px'/>
+            <img src='${this.image.url}' style='width: 100px;height: 100px'/>
         </div>
     `;
     }
